@@ -1,0 +1,20 @@
+<% content_for :title do %>My super sweet dashboard<% end %>
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_base_dimensions = [250, 450]
+  Dashing.numColumns = 3
+});
+</script>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="ratp" data-view="Ratp" data-title="RATP"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="klimato" data-view="Klimato"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+    </li>
+  </ul>
+</div>

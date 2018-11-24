@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #607d8b;
+
+$rounded-width:     1em;
+$rounded-height:    1em;
+$rect-width:        1.72em;
+$rect-height:       1em;
+
+// ----------------------------------------------------------------------------
+// Widget-ratp styles
+// ----------------------------------------------------------------------------
+.widget-ratp {
+	background-color: $background-color;
+
+	.bus, .noctilien {
+		width: $rect-width;
+		height: $rect-height;
+	}
+	.metro, .tram, .rer {
+		width: $rounded-width;
+		height: $rounded-height;
+	}
+
+	table {
+		border-collapse: separate;
+		border-spacing: 4px 0px;
+	}
+
+	td {
+		border-bottom: 1px dotted #CCC;
+		text-align: left;
+		white-space: nowrap;
+		max-width: 0;
+	}
+
+	.transport {
+		width: 12%;
+		text-align: center;
+	}
+	.dest {
+		width: 62%;
+	}
+
+	.icon {
+		vertical-align: text-bottom;
+	}
+
+	.scroll {
+		white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	.scroll span {
+		display: inline-block;
+
+		animation-name: marquee;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+
+		-moz-animation-name: marquee;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-duration: 8s;
+
+		-webkit-animation-name: marquee;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-duration: 8s;
+	}
+}
+
+@keyframes marquee {
+	0%, 20% {
+		transform: translateX(0);
+		-moz-transform: translateX(0);
+		-webkit-transform: translateX(0);
+	}
+	80%, 100% {
+		transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+	}
+}
